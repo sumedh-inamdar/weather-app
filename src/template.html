@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <main>
+        <div class="leftMain">
+            <form id="searchForm">
+                <div>
+                    <label class="formTitle" for="locInput">Location:</label>
+                    <input type="search" id="locInput" minlength=1 placeholder="City or City, Country">
+                    <button>Search</button>
+                </div>
+                <div>
+                    <div class="formTitle" id="radioTitle">Scale Type:</div>
+                    <div>
+                        <input type="radio" id="celsius" name="tempScale" value="celsius">
+                        <label for="celsius">Celsius</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="fahrenheit" name="tempScale" value="fahrenheit" checked>
+                        <label for="fahrenheit">Fahrenheit</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="rightMain">
+            <div>API Status:&nbsp;<span class="dataField" id="apiStatus"></span></div>
+            <div>Location:&nbsp;<span class="dataField" id="location"></span></div>
+            <div>Description:&nbsp;<span class="dataField" id="description"></span><img id="weatherIcon"></div> 
+            <div>Temperature:&nbsp;<span class="dataField" id="temp"></span></div>
+            <div>Feels Like:&nbsp;<span class="dataField" id="feelsLike"></span></div>
+            <div>High:&nbsp;<span class="dataField" id="tempHigh"></span></div>
+            <div>Low:&nbsp;<span class="dataField" id="tempLow"></span></div>
+            <div>Humidity:&nbsp;<span class="dataField" id="humidity"></span></div>
+            <div>Sunrise today:&nbsp;<span class="dataField" id="sunrise"></span></div>
+            <div>Sunset today:&nbsp;<span class="dataField" id="sunset"></span></div>
+        </div>
+    </main>
+    <footer>
+        <small>&copy; Copyright <span id="year"></span>, sumedh-inamdar</small>
+        <a href="https://github.com/sumedh-inamdar" target="_blank" title="Link to personal Github">
+            <input type="image" alt="Github" src="images/Octocat.png">
+        </a>
+    </footer>
+</body>
+</html>
