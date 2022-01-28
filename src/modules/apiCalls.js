@@ -6,11 +6,4 @@ async function fetchWeather(location, isCelsius) {
     return weatherData;
 }
 
-async function fetchWeatherIcon(weatherCode) {
-    const url = `http://openweathermap.org/img/wn/${weatherCode}.png`;
-    const response = await fetch(url, {mode: 'cors'});
-    
-    return response.url;
-}
-
-export { fetchWeather, fetchWeatherIcon }
+export { fetchWeather }

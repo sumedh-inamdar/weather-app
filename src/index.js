@@ -1,12 +1,11 @@
 import './style.css';
-import { fetchWeather, fetchWeatherIcon } from './modules/apiCalls'
+import { fetchWeather } from './modules/apiCalls'
 import { clearWeatherDOM, updateWeatherDOM } from './modules/updateDOM'
 
 const searchForm = document.querySelector('#searchForm');
 const radioTemp = document.querySelectorAll('input[name="tempScale"]');
 const location = document.querySelector('#location');
 const apiStatus = document.querySelector('#apiStatus');
-const weatherIcon = document.querySelector('#weatherIcon');
 
 searchForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -24,12 +23,13 @@ async function getWeatherData(location, isCelsius) {
     try {
         clearWeatherDOM();
         apiStatus.textContent = 'Loading...';
+
         await wait(1000);
         const weatherData = await fetchWeather(location, isCelsius);
-        const imageURL = await fetchWeatherIcon(weatherData.weather[0].icon);
+        
         updateWeatherDOM(weatherData, isCelsius);
-        weatherIcon.src = imageURL;
         apiStatus.textContent = 'Successful';  
+
     } catch (error) {
         alert('error occured. check console for detailed info or retry.');
         console.log(error);

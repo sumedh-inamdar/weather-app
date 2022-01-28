@@ -11,6 +11,7 @@ function updateWeatherDOM(weatherData, isCelsius) {
     const tempSymbol = isCelsius ? ' °C' : ' °F';
     document.querySelector('#location').textContent =  `${weatherData.name}, ${weatherData.sys.country}`;
     document.querySelector('#description').textContent =  weatherData.weather[0].description;
+    document.querySelector('#weatherIcon').src = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`;
     document.querySelector('#temp').textContent = weatherData.main.temp + tempSymbol;
     document.querySelector('#feelsLike').textContent = weatherData.main.feels_like + tempSymbol;
     document.querySelector('#tempHigh').textContent = weatherData.main.temp_max + tempSymbol;

@@ -7,7 +7,7 @@ body {
 }
 header {
     display: flex;
-    background-color: #0077b6;
+    background-color: #023e8a;
     height: 75px;
     margin: auto;
     border-radius: 25px;
@@ -52,7 +52,7 @@ label {
 #radioTitle {
     margin-bottom: 5px;
 }
-input {
+input#locInput {
     font-weight: 300;
     border-radius: 7px;
     padding: 3px 0px 3px 7px;
