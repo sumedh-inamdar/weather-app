@@ -2,7 +2,7 @@
 
 Provides real-time weather information of user supplied location using the OpenWeather API
 
--><a href="">link to page</a><-
+-><a href="https://sumedh-inamdar.github.io/weather-app/">link to page</a><-
 
 ## New lessons / material incorporated
 - Asynchronous code and Promises
