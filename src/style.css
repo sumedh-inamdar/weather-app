@@ -3,13 +3,17 @@ body, input, button{
     font-family: 'Merriweather';
 }
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #3d405b;
+    min-height: 99vh;
+    position: relative;
+    margin: 0px;
 }
 header {
     display: flex;
     background-color: #023e8a;
     height: 75px;
-    margin: auto;
     border-radius: 25px;
     box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
@@ -21,7 +25,9 @@ header > h1 {
 
 main {
     display: flex;
+    padding-bottom: 3rem;
 }
+
 main > div {
     flex: 1 1 50%;
     border-radius: 25px;
@@ -53,6 +59,7 @@ label {
     margin-bottom: 5px;
 }
 input#locInput {
+    -webkit-appearance: none;
     font-weight: 300;
     border-radius: 7px;
     padding: 3px 0px 3px 7px;
@@ -98,3 +105,14 @@ footer input:hover {
   transform: scale(3) translate(0, -5px);
 }
 
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+    input#locInput {
+        max-width: 50%;
+    }
+    #searchForm > div {
+        margin: 20px 0px;
+    }
+}
