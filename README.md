@@ -4,6 +4,8 @@ Provides real-time weather information of user supplied location using the OpenW
 
 -><a href="https://sumedh-inamdar.github.io/weather-app/">link to page</a><-
 
+![front page screenshot](./src/images/weatherApp_screenshot.png)
+
 ## New lessons / material incorporated
 - Asynchronous code and Promises
 - Async and Await
