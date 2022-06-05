@@ -16,3 +16,4 @@ Provides real-time weather information of user supplied location using the OpenW
 ## Future Features
 
 ## Bugs to Fix
+- [ ] Some location formats return as invalid (US city, State - e.g. Austin, TX)
